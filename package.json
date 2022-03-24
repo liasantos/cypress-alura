@@ -1,0 +1,14 @@
+{
+  "name": "cypress-alura",
+  "version": "1.0.0",
+  "description": "primeiro projeto com cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "author": "Lia Santos",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.5.2"
+  }
+}
