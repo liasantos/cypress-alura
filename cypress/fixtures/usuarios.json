@@ -1,0 +1,20 @@
+[
+    {
+        "email": "lyanna_stark@alura.com.br",
+        "fullName": "Lyanna Stark",
+        "userName": "lyanna",
+        "password": "promiseMeNed"
+    },
+    {
+        "email": "ned_stark@alura.com.br",
+        "fullName": "Ned Stark",
+        "userName": "lordstark",
+        "password": "forHonor"
+    },
+    {
+        "email": "robb_stark@alura.com.br",
+        "fullName": "Robb Stark",
+        "userName": "robb",
+        "password": "winterSComming"
+    }
+]
