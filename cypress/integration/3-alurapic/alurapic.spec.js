@@ -81,7 +81,7 @@ describe('Login e registro de usuarios alura pic', () => {
 
     const usuarios = require('../../fixtures/usuarios.json');
     usuarios.forEach(usuario => {
-        it.only(`registra novo usuario ${usuario.userName}`, () => {
+        it(`registra novo usuario ${usuario.userName}`, () => {
             cy.contains('a', 'Register now').click();
             cy.contains('button', 'Register').click();
             cy.get('input[formcontrolname="email"]').type(usuario.email);
@@ -93,4 +93,18 @@ describe('Login e registro de usuarios alura pic', () => {
     }
 
     );
+})
+
+describe('Buscar fotos e dados', () => {
+    it.only('buscar fotos do Flavio', () => {
+        cy.request({
+            method: 'GET',
+            url: 'https://apialurapic.herokuapp.com/flavio/photos'
+        }).then((res) => {
+            expect(res.status).to.be.equal(200)
+            expect(res.body).is.not.empty
+            expect(res.body[0]).to.have.property('description')
+            expect(res.body[0].description).to.be.equal('Farol iluminado')
+        })
+    })
 })
