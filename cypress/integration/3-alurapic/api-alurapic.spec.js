@@ -11,7 +11,7 @@ describe('Buscar fotos e dados', () => {
         })
     })
 
-    it.only('fazer login do Flavio', () => {
+    it('fazer login do Flavio', () => {
         cy.request({
             method: 'POST',
             url: 'https://apialurapic.herokuapp.com/user/login',
